@@ -1,1 +1,1 @@
-# CPGAN
+# ContactGAN
