@@ -54,11 +54,13 @@ python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
 
 ### ContactGAN Usage  
 ```
-python test/denoising_gan_test.py --input=data/example_files/5OHQA.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/G_epoch_6000_50 --D_path=model/CCMPredD_epoch_6000_50
+python test/denoising_gan_test.py --input=data/example_files/5OHQA_input.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/G_epoch_6000_50 --D_path=model/CCMPredD_epoch_6000_50
 
 ```
 ### Output contact map Visualization  
 ```
-python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
+python util/plot_cmap.py --input=data/example_files/5OHQA_output.npy
  
 ```
+Example visualization looks like this.  
+![](https://github.com/kiharalab/ContactGAN/blob/master/data/git/fig2.jpg)   
