@@ -20,9 +20,9 @@ Cite : Sai Raghavendra Maddhuri Venkata Subramaniya, Aashish Jain, Yuki Kagaya, 
 
 Python 3 : https://www.python.org/downloads/  
 pytorch : pip/conda install pytorch  
-CCMPred : A freely avalibale software. It can be downloaded and installed from here : https://github.com/soedinglab/CCMpred  
-DeepContact : A freely avalibale software. It can be downloaded and installed from here : https://github.com/largelymfs/deepcontact   
-DeepCov : A freely avalibale software. It can be downloaded and installed from here : https://github.com/psipred/DeepCov  
+CCMPred : A freely available software. It can be downloaded and installed from here : https://github.com/soedinglab/CCMpred  
+DeepContact : A freely available software. It can be downloaded and installed from here : https://github.com/largelymfs/deepcontact   
+DeepCov : A freely available software. It can be downloaded and installed from here : https://github.com/psipred/DeepCov  
 
 ## Instructions  
 Generate an input contact map file using a method of your choice from the 4 methods decribed.  
