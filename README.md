@@ -24,3 +24,18 @@ CCMPred : A freely avalibale software. It can be downloaded and installed from h
 DeepContact : A freely avalibale software. It can be downloaded and installed from here : https://github.com/largelymfs/deepcontact   
 DeepCov : A freely avalibale software. It can be downloaded and installed from here : https://github.com/psipred/DeepCov  
 
+## Instructions  
+Generate an input contact map file using a method of your choice from the 4 methods decribed.  
+Example file given - data/example_files/5OHQA.ccmpred  
+### ContactGAN Usage  
+```
+python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_in_channels=32 --D_in_channels=32 --G_path=model/CCMPred/G_epoch_6000_50 --D_path=model/CCMPredD_epoch_6000_50
+```
+
+### Output interpretation  
+Generated output contact map file is the denoised version of the input map.  
+
+### Visualization    
+```
+python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
+```
