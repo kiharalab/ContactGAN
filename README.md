@@ -48,3 +48,17 @@ python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
   --input               Input Contact Map    
   
 ```
+
+## Tutorial: 
+***For the purpose of this tutorial, please refer to example contact map input and output are provided in data/example_files/***   
+
+### ContactGAN Usage  
+```
+python test/denoising_gan_test.py --input=data/example_files/5OHQA.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/G_epoch_6000_50 --D_path=model/CCMPredD_epoch_6000_50
+
+```
+### Output contact map Visualization  
+```
+python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
+ 
+```
