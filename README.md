@@ -72,5 +72,5 @@ python test/denoising_gan_test.py --input=data/example_files/5OHQA_input.ccmpred
 python util/plot_cmap.py --input=data/example_files/5OHQA_output.npy
  
 ```
-Below is an example visualization for contact maps of CCMpred before and after ContactGAN for protein with PDB ID: (5OHQA[http://www.rcsb.org/structure/5OHQ]).      
+Below is an example visualization for contact maps of CCMpred before and after ContactGAN for protein with PDB ID: [5OHQA](http://www.rcsb.org/structure/5OHQ).      
 ![](https://github.com/kiharalab/ContactGAN/blob/master/data/git/fig2.jpg)   
