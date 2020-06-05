@@ -27,8 +27,7 @@ DeepCov : A freely available software. It can be downloaded and installed from h
 
 ```
 ## Instructions  
-Generate an input contact map file using a method of your choice from the 4 methods decribed.  
-Example file given - data/example_files/5OHQA.ccmpred  
+Generate an input contact map file using a method of your choice from the 4 methods described.  
 ### ContactGAN Usage  
 ```
 python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/G_epoch_6000_50 --D_path=model/CCMPredD_epoch_6000_50
@@ -41,9 +40,8 @@ python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_re
 ```
 
 ### Output interpretation  
-Generated output contact map file is the denoised version of the input map.  
-Output file looks exactly same as input file structure-wise.  
-
+Generated output contact map file is the denoised version of the input map.Output file looks exactly same as input file structure-wise.  
+An example contact map can be found at the bottom of this page.  
 ### Visualization    
 ```
 python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
@@ -55,6 +53,8 @@ python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
 ***For the purpose of this tutorial, please refer to example contact map input and output are provided in data/example_files/***   
 
 ### ContactGAN Usage  
+To run ContactGAN, you will need an input contact map from one of the following 4 methods - CCMpred, DeepCov, DeepContact, or trRosetta.  
+An example contact map can be found here : ![](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files)
 ```
 python test/denoising_gan_test.py --input=data/example_files/5OHQA_input.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/G_epoch_6000_50 --D_path=model/CCMPredD_epoch_6000_50
 
