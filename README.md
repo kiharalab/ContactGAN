@@ -57,7 +57,7 @@ To run ContactGAN, you will need an input contact map from one of the following 
 An example contact map can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files).  
 Model files required to run ContactGAN can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/model/)  
 Once you have a contact map e.g. CCMpred, you can run ContactGAN as follows:  
-1) Specify imput map to --input argument
+1) Specify input map to --input argument
 2) G_res_blocks - Number of Generator ResNet blocks. Specify 6 for trRosetta and 3 for others.  
 3) D_res_blocks - Number of Disciminator ResNet blocks. Specify 3.  
 4) G_path - Generator Model Path. If you're using CCMpred you can use this [path](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred/G_epoch_6000_50)  
@@ -72,5 +72,5 @@ python test/denoising_gan_test.py --input=data/example_files/5OHQA_input.ccmpred
 python util/plot_cmap.py --input=data/example_files/5OHQA_output.npy
  
 ```
-Example visualization looks like this.  
+Below is an example visualization for contact maps of CCMpred before and after ContactGAN for protein with PDB ID: (5OHQA[http://www.rcsb.org/structure/5OHQ]).      
 ![](https://github.com/kiharalab/ContactGAN/blob/master/data/git/fig2.jpg)   
