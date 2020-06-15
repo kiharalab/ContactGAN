@@ -29,8 +29,9 @@ DeepCov : A freely available software. It can be downloaded and installed from h
 ## Instructions  
 Generate an input contact map file using a method of your choice from the 4 methods described.  
 ### ContactGAN Usage  
+If you are testing with a single method as 1-channel input, run ContactGAN as follows:  
 ```
-python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
+python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<1-channel directory>/Generator --D_path=model/<1-channel directory>/Discriminator
   --input               Input Contact Map    
   --G_res_blocks        Number of ResNet blocks in Generator (Default : 3)
   --D_res_blocks        Number of ResNet blocks in Discriminator (Default : 3)
@@ -38,7 +39,16 @@ python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_re
   --D_path              Specify path of Discriminator model
   
 ```
-
+If you are testing with two methods as 2-channel input, run ContactGAN as follows:  
+```
+python test/denoising_gan2_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<2-channel directory>/Generator --D_path=model/<2-channel directory>/Discriminator
+ 
+```
+If you are testing with three methods as 3-channel input, run ContactGAN as follows:  
+```
+python test/denoising_gan3_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<3-channel directory>/Generator --D_path=model/<3-channel directory>/Discriminator
+ 
+```
 ### Output interpretation  
 Generated output contact map file is the denoised version of the input map.Output file looks exactly same as input file structure-wise.  
 An example contact map can be found at the bottom of this page.  
