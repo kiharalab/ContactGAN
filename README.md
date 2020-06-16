@@ -60,6 +60,7 @@ python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
 ```
 
 ## Tutorial: 
+**In this tutorial, you'll learn to test ContactGAN for single channel inputs.**   
 ***For the purpose of this tutorial, please refer to example contact map input and output are provided in data/example_files/***   
 
 ### ContactGAN Usage  
