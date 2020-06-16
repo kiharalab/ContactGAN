@@ -64,8 +64,8 @@ python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
 
 ### ContactGAN Usage  
 To run ContactGAN, you will need an input contact map from one of the following 4 methods - CCMpred, DeepCov, DeepContact, or trRosetta.  
-An example contact map can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files).  
-Model files required to run ContactGAN can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/model/)  
+An example contact map can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files/input).  
+Model files required to run ContactGAN can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/model/)   
 Once you have a contact map e.g. CCMpred, you can run ContactGAN as follows:  
 1) Specify input map to --input argument
 2) G_res_blocks - Number of Generator ResNet blocks. Specify 6 for trRosetta and 3 for others.  
@@ -74,12 +74,12 @@ Once you have a contact map e.g. CCMpred, you can run ContactGAN as follows:
 5) D_path - Discriminator Model Path. If you're using CCMpred you can use this [path](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred/Discriminator)  
 
 ```
-python test/denoising_gan_test.py --input=data/example_files/5OHQA_input.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
+python test/denoising_gan_test.py --input=data/example_files/input/5OHQA.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
 
 ```
 ### Output contact map Visualization  
 ```
-python util/plot_cmap.py --input=data/example_files/5OHQA_output.npy
+python util/plot_cmap.py --input=data/example_files/output/5OHQA.npy
  
 ```
 Below is an example visualization for contact maps of CCMpred before and after ContactGAN for protein with PDB ID: [5OHQA](http://www.rcsb.org/structure/5OHQ).      
