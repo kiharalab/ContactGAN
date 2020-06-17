@@ -32,7 +32,7 @@ Generate an input contact map file using a method of your choice from the 4 meth
 If you are testing with a single method as 1-channel input, run ContactGAN as follows:  
 ```
 python test/denoising_gan_test.py --input=<INPUT contact prediction directory> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<1-channel directory>/Generator --D_path=model/<1-channel directory>/Discriminator
-  --input               Input Contact Map    
+  --input               Input Contact Map  Directory  
   --G_res_blocks        Number of ResNet blocks in Generator (Default : 3)
   --D_res_blocks        Number of ResNet blocks in Discriminator (Default : 3)
   --G_path              Specify path of Generator model
