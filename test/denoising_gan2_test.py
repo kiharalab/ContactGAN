@@ -97,20 +97,6 @@ class getDataset(Dataset):
     def __len__(self):
         return len(self.lr1_imageFileNames)
 
-lr1='./data/example_files/input/'
-lr2='./data/example_files/input/'
-dataset = getDataset(lr1,lr2)
-
-batch_size = 1
-
-dataset_size = len(dataset)
-print(dataset_size)
-indices = list(range(dataset_size))
-
-test_sampler = SubsetRandomSampler(indices)
-
-test_loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
-                                                sampler=test_sampler)
 
 
 class Discriminator(nn.Module):
@@ -258,6 +244,7 @@ class GeneratorLoss(nn.Module):
 
 import argparse
 parser = argparse.ArgumentParser()
+parser.add_argument("--input", nargs=2, help="Path to contact map input")
 parser.add_argument("--G_path", help="Generator mdoel path")
 parser.add_argument("--D_path", help="Discriminator mdoel path")
 parser.add_argument("--G_res_blocks", type=int, help="No. of Generator resnet blocks")
@@ -268,8 +255,24 @@ args = parser.parse_args()
 pathG=args.G_path
 pathD=args.D_path
 
-lr = 0.001
-train_epoch = 50
+
+lr1=args.input[0]
+lr2=args.input[1]
+dataset = getDataset(lr1,lr2)
+
+batch_size = 1
+
+dataset_size = len(dataset)
+print(dataset_size)
+indices = list(range(dataset_size))
+
+test_sampler = SubsetRandomSampler(indices)
+
+test_loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
+                                                sampler=test_sampler)
+
+
+
 G = Generator(args.G_in_channels,args.G_res_blocks)
 G.load_state_dict(torch.load(pathG))
 G.eval()
@@ -281,9 +284,6 @@ D.cuda()
 
 G_criterionLoss = GeneratorLoss().cuda()
 D_criterionloss = nn.BCEWithLogitsLoss()
-
-G_optimizer = optim.Adam(G.parameters(), lr=lr, betas=(0.9, 0.999))
-D_optimizer = optim.Adam(D.parameters(), lr=lr, betas=(0.9, 0.999))
 
 G.eval()
 D.eval()
