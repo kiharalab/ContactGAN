@@ -31,7 +31,7 @@ Generate an input contact map file using a method of your choice from the 4 meth
 ### ContactGAN Usage  
 If you are testing with a single method as 1-channel input, run ContactGAN as follows:  
 ```
-python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<1-channel directory>/Generator --D_path=model/<1-channel directory>/Discriminator
+python test/denoising_gan_test.py --input=<INPUT contact prediction directory> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<1-channel directory>/Generator --D_path=model/<1-channel directory>/Discriminator
   --input               Input Contact Map    
   --G_res_blocks        Number of ResNet blocks in Generator (Default : 3)
   --D_res_blocks        Number of ResNet blocks in Discriminator (Default : 3)
@@ -41,12 +41,12 @@ python test/denoising_gan_test.py --input=<INPUT Contact Prediction File> --G_re
 ```
 If you are testing with two methods as 2-channel input, run ContactGAN as follows:  
 ```
-python test/denoising_gan2_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<2-channel directory>/Generator --D_path=model/<2-channel directory>/Discriminator
+python test/denoising_gan2_test.py --input <INPUT contact prediction directory 1> <INPUT contact prediction directory 2> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<2-channel directory>/Generator --D_path=model/<2-channel directory>/Discriminator
  
 ```
 If you are testing with three methods as 3-channel input, run ContactGAN as follows:  
 ```
-python test/denoising_gan3_test.py --input=<INPUT Contact Prediction File> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<3-channel directory>/Generator --D_path=model/<3-channel directory>/Discriminator
+python test/denoising_gan3_test.py --input <INPUT contact prediction directory 1> <INPUT contact prediction directory 2> <INPUT contact prediction directory 3> --G_res_blocks=3 --D_res_blocks=3 --G_path=model/<3-channel directory>/Generator --D_path=model/<3-channel directory>/Discriminator
  
 ```
 ### Output interpretation  
@@ -88,7 +88,6 @@ In this tutorial, you'll learn to test ContactGAN for multi-channel (2) inputs.
 To run ContactGAN with multiple channels i.e. either 2 or 3, you will need specify multiple contact maps as inputs.  
 An example for multiple channels can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files/input/multi_channel).  
 Model files required to run ContactGAN can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred_DeepContact)   
-Once you have a contact map e.g. CCMpred, you can run ContactGAN as follows:  
 1) Specify input map directories i.e., channel1 and channel2 to --input argument.  
 2) G_res_blocks - Number of Generator ResNet blocks. Specify 6 for trRosetta and 3 for others.  
 3) D_res_blocks - Number of Disciminator ResNet blocks. Specify 3.  
