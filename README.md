@@ -60,22 +60,23 @@ python util/plot_cmap.py --input=<OUTPUT Contact Prediction File>
 ```
 
 ## Tutorial: 
-**In this tutorial, you'll learn to test ContactGAN for single channel inputs.**   
+**Single-Channel**  
+In this tutorial, you'll learn to test ContactGAN for single channel inputs.  
 ***For the purpose of this tutorial, please refer to example contact map input and output are provided in data/example_files/***   
 
 ### ContactGAN Usage  
 To run ContactGAN, you will need an input contact map from one of the following 4 methods - CCMpred, DeepCov, DeepContact, or trRosetta.  
-An example contact map can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files/input).  
-Model files required to run ContactGAN can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/model/)   
+An example contact map can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/data/example_files/input/single_channel).  
+Model files required to run ContactGAN can be found [here](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred)   
 Once you have a contact map e.g. CCMpred, you can run ContactGAN as follows:  
-1) Specify input map to --input argument
+1) Specify input map directory to --input argument
 2) G_res_blocks - Number of Generator ResNet blocks. Specify 6 for trRosetta and 3 for others.  
 3) D_res_blocks - Number of Disciminator ResNet blocks. Specify 3.  
 4) G_path - Generator Model Path. If you're using CCMpred you can use this [path](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred/Generator)  
 5) D_path - Discriminator Model Path. If you're using CCMpred you can use this [path](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred/Discriminator)  
 
 ```
-python test/denoising_gan_test.py --input=data/example_files/input/5OHQA.ccmpred --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
+python test/denoising_gan_test.py --input=data/example_files/input/sigle_channel --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
 
 ```
 ### Output contact map Visualization  
