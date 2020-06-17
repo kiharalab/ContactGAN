@@ -95,7 +95,7 @@ Model files required to run ContactGAN can be found [here](https://github.com/ki
 5) D_path - Discriminator Model Path. If you're using CCMpred you can use this [path](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred_DeepContact/Discriminator)  
 
 ```
-python test/denoising_gan2_test.py --input data/example_files/input/multi_channel/channel1 data/example_files/input/multi_channel/channel2 --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
+python test/denoising_gan2_test.py --input data/example_files/input/multi_channel/channel1 data/example_files/input/multi_channel/channel2 --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred_DeepContact/Generator --D_path=model/CCMPred_DeepContact/Discriminator
 
 ```
 ### Output contact map Visualization  
