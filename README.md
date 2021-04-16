@@ -6,13 +6,14 @@ Copyright (C) 2020 Sai Raghavendra Maddhuri, Aashish Jain, Yuki Kagaya, Genki Te
 License: GPL v3 for academic use. (For commercial use, please contact us for different licensing)
 
 Contact: Daisuke Kihara (dkihara@purdue.edu)
-
+## Citation:
+```
 @article{sai2021contactgan,
   title={Protein Contact Map Refinement for Improving Structure Prediction Using Generative Adversarial Networks},
   author={Sai Raghavendra Maddhuri Venkata Subramaniya, Genki Terashi, Aashish Jain, Yuki Kagaya, Daisuke Kihara},
   journal={Bioinformatics}
 }
-
+```
 ## About ContactGAN  
 > ContactGAN is a novel contact map denoising and refinement method based on Generative adversarial networks.  
 > ContactGAN can be trained and combined with any contact prediction method to improve and correct similar patterns of errors that creep into the method.
