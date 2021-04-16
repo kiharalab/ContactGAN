@@ -7,7 +7,11 @@ License: GPL v3 for academic use. (For commercial use, please contact us for dif
 
 Contact: Daisuke Kihara (dkihara@purdue.edu)
 
-Cite : Sai Raghavendra Maddhuri Venkata Subramaniya, Aashish Jain, Yuki Kagaya, Genki Terashi, and Daisuke Kihara, Protein Contact Map De-noising using Generative Adversarial Networks. In Submission. (2020)
+@article{sai2021contactgan,
+  title={Protein Contact Map Refinement for Improving Structure Prediction Using Generative Adversarial Networks},
+  author={Sai Raghavendra Maddhuri Venkata Subramaniya, Genki Terashi, Aashish Jain, Yuki Kagaya, Daisuke Kihara},
+  journal={Bioinformatics}
+}
 
 ## About ContactGAN  
 > ContactGAN is a novel contact map denoising and refinement method based on Generative adversarial networks.  
