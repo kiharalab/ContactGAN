@@ -81,7 +81,7 @@ Once you have a contact map e.g. CCMpred, you can run ContactGAN as follows:
 5) D_path - Discriminator Model Path. If you're using CCMpred you can use this [path](https://github.com/kiharalab/ContactGAN/tree/master/model/CCMPred/Discriminator)  
 
 ```
-python test/denoising_gan_test.py --input=data/example_files/input/sigle_channel --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
+python test/denoising_gan_test.py --input=data/example_files/input/single_channel --G_res_blocks=3 --D_res_blocks=3 --G_path=model/CCMPred/Generator --D_path=model/CCMPred/Discriminator
 
 ```
 
